@@ -4,8 +4,8 @@
     "version": "0.1.0"
   },
   "build": {
-    "distDir": "../release",
-    "devPath": "http://localhost:8080/",
+    "distDir": "../lib/vscode/",
+    "devPath": "../lib/vscode/",
     "beforeDevCommand": "",
     "beforeBuildCommand": ""
   },
