@@ -1,12 +1,12 @@
 {
   "package": {
-    "productName": "tauri-vscode",
+    "productName": "VSCodeTauri",
     "version": "0.1.0"
   },
   "build": {
-    "distDir": "../lib/vscode/",
-    "devPath": "../lib/vscode/",
-    "beforeDevCommand": "",
+    "distDir": ".",
+    "devPath": "http://localhost:8634/",
+    "beforeDevCommand": "./bin/code-server --auth none",
     "beforeBuildCommand": ""
   },
   "tauri": {
@@ -14,9 +14,15 @@
       "active": true,
       "targets": "all",
       "identifier": "com.tauri.dev",
-      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
       "resources": [],
-      "externalBin": [],
+      "externalBin": ["bin/code-server"],
       "copyright": "",
       "category": "DeveloperTool",
       "shortDescription": "",
@@ -47,7 +53,7 @@
     },
     "windows": [
       {
-        "title": "VSCode",
+        "title": "VSCode on Tauri",
         "width": 800,
         "height": 600,
         "resizable": true,
